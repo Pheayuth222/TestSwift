@@ -1,16 +1,24 @@
-struct Employee {
-  var id  : Int
-  var name : String
-  var age : Int
-  var position : String
+struct Movie {
+  var title : String
+  var genre : String
 }
 
-var emp = [
-  Employee(id: 002, name: "Yuth Fight", age: 24, position: "iOS"),
-  Employee(id: 003, name: "Yuth Fight", age: 24, position: "iOS"),
-  Employee(id: 004, name: "Yuth Fight", age: 24, position: "iOS")
+var movies = [
+  Movie(title: "ស្រលាញ់អូនដល់ឆ្អឹង", genre: "Gentle"),
+  Movie(title: "ABC Alphabets", genre: "Kids"),
+  Movie(title: "ET", genre: "Fiction"),
+  Movie(title: "Finding Nemo", genre: "Kids"),
+  Movie(title: "Cars", genre: "Kids")
 ]
 
-for item in emp{
-  print(item)
+movies.forEach{
+  movie in 
+  addFav(movie)
+}
+
+func addFav(_ movie : Movie){ }
+
+movies.enumerated().forEach{(index, movie)  in 
+      print("Movie : Index - \(index), title - \(movie.title) Genre - \(movie.genre)")
+  
 }
